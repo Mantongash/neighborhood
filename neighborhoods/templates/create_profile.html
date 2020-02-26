@@ -1,4 +1,5 @@
 {% load static%}
+{% load crispy_forms_tags%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +8,7 @@
   <meta charset="utf-8">
 
   <title> My Hood </title>
+
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -22,7 +24,13 @@
 <body>
 
   {% include 'navbar.html'%}
-  {% block content %} {%endblock%}
+  {% block content %} 
+  <form action="" method="POST" class="frm">
+    {% csrf_token %}
+    {{form | crispy}}
+    <input type="submit" class="btn-info">
+  </form>
+  {%endblock%}
 
 
 

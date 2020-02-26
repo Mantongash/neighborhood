@@ -67,7 +67,7 @@ Open the application on your browser `127.0.0.1:8000`.
   
   
 ## Known Bugs  
-* There are no known bugs at the moment.
+* Profile page not working as expected.
   
 ## Contact Information   
 If you have any question or contributions, please email me at ngash.anto@gmail.com 

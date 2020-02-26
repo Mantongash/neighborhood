@@ -46,3 +46,8 @@ nav a {
   background: #a6f78d;
   height: 91vh;
 }
+
+.frm {
+  width: 50%;
+  margin: 0 auto;
+}
