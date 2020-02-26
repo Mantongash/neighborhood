@@ -27,3 +27,8 @@
 .flex-content {
   height: 91vh;
 }
+
+nav a {
+  color: crimson;
+  font-weight: bolder;
+}
