@@ -1,4 +1,4 @@
-# G-Hood
+# My Hood
 
 ##### By [Anthony Ng'ang'a](https://github.com/Mantongash)
 
