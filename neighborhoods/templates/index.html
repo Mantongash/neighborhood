@@ -1,17 +1,13 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
+<div class="body-background">
 <div class="container-fluid">
-  <div class="text-center" style="padding-top: 160px;padding-bottom: 176px">
+  <div class="text-center d-flex justify-content-center align-items-center flex-column flex-content">
     <h1 style="font-size: 70px">Welcome to My Hood</h1>
-    <a href="{% url 'hood' %}" class="btn btn-sm btn-info mt-4"
+    <a href="{% url 'hood' %}" class="btn btn-sm btn-info mt-4 btn-home"
       >View Neighbourhoods</a
     >
   </div>
 </div>
-<style>
-  body {
-    background-image: url("static/images/index1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
+</div>
+
 {% endblock %}
