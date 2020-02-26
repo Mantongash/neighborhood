@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-
+<div class="hood-body">
 <div class="container" >
   <div class="row">
     <div class="col-md-12">
-      <div class="card mb-3">
-        <div class="row no-gutters">
+      <div class="card m-4">
+        <div class="row no-gutters m-4">
           <div class="col-md-5">
             <img src="{{ hood.neighbourhood_logo.url }}" class="img-thumbnail" alt="">
           </div>
-          <div class="col-md-7">
+          <div class="col-md-7 mb-4">
             <div class="card-body">
               <h5 class="card-title tt">{{ hood.name }} ({{hood.location}})
               </h5>
@@ -45,7 +45,7 @@
         <div class="row">
           {% for busines in business %}
           <div class="col-md-4">
-            <div class="card mb-4">
+            <div class="card mb-4 p-4">
               <div class="card-body">
                 <h6 class="card-title">{{busines.name}}:<span>{{busines.email}}</span>
                 </h6>
@@ -61,13 +61,14 @@
         <div class="row">
           {% for post in posts %}
           <div class="col-md-4">
-            <div class="card mb-4 hpost">
+            <div class="card mb-4 hpost p-4">
               
                 <div class="panel-header">
                 <h5 class="card-title text-center">{{post.title}}</h5>
+                <hr>
               </div>
               <div class="panel-body">
-                <p class="card-text">" {{post.post}} "
+                <p class="card-text"> {{post.post}}
                 </p>
                 <p class="card-text">By: <small class="text-info">
                     {{ post.user.user.username|title }}</small> <small style="float:right">{{post.date|date}}</small>
@@ -111,7 +112,7 @@
 
 <style>
   body{
-    background-color: rgb(209, 97, 116);
+    background-color: #a6f78d;
   }
 </style>
 {% endblock %}
