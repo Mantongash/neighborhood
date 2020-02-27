@@ -42,15 +42,6 @@ def edit_profile(request, username):
 def profile(request, username):
     return render(request, 'profile.html')
 
-@login_required(login_url='login')
-def neighbourhoods(request):
-    all_hoods = Neighbourhood.objects.all()
-    all_hoods = all_hoods[::-1]
-    params = {
-        'all_hoods': all_hoods,
-    }
-    return render(request, 'neighbourhoods.html', params)
-
 
 def create_neighbourhood(request):
     if request.method == 'POST':

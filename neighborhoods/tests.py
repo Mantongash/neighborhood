@@ -5,15 +5,15 @@ from django.contrib.auth.models import User
 
 class TestProfile(TestCase):
     def setUp(self):
-        self.user = User(username='doryn',
-                         email='doryn@gmail.com', password='3rt5')
+        self.user = User(username='ben',
+                         email='ben@gmail.com', password='3rt5')
         self.user.save()
 
         self.neighbourhood = Neigbourhood(
             name='Goster', description='Next to Bamburi', police_number=910, healthcenter_number=56)
         self.neighbourhood.save()
 
-        self.profile = Profile(user=self.user, name='doryn', bio='my bio',
+        self.profile = Profile(user=self.user, name='ben', bio='my bio',
                                profile_picture='image.png', location='kmos', neighbourhood=self.neighbourhood)
 
     def test_instance(self):
@@ -51,7 +51,7 @@ class TestNeigbourhood(TestCase):
 
 class TestBusiness(TestCase):
     def setUp(self):
-        self.user = User(username='Cynthia',
+        self.user = User(username='Anthony',
                          email='g@gmail.com', password='123')
         self.user.save()
 
